@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { ArrowDown, Mail } from 'lucide-react'
 import { GitHubIcon, LinkedInIcon } from '../ui/SocialIcons'
+import HeroParticles from '../canvas/HeroParticles'
 
 const SOCIAL_LINKS = [
   {
@@ -41,25 +42,78 @@ export default function Hero() {
     document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })
   }
 
-  const scrollToAbout = () => {
-    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })
-  }
-
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col items-center justify-center px-6"
+      className="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden"
     >
-      {/* Radial glow behind text */}
+      {/* ── Hero background: animated gradient mesh ── */}
       <div
-        className="absolute inset-0 pointer-events-none"
+        className="absolute inset-0 -z-10"
+        aria-hidden="true"
+        style={{
+          background: '#0D1117',
+        }}
+      />
+
+      {/* Animated grid pattern */}
+      <div
+        className="absolute inset-0 -z-10"
+        aria-hidden="true"
+        style={{
+          backgroundImage: `
+            linear-gradient(rgba(32, 227, 178, 0.04) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(32, 227, 178, 0.04) 1px, transparent 1px)
+          `,
+          backgroundSize: '64px 64px',
+        }}
+      />
+
+      {/* Radial glow — top center (mint, clean) */}
+      <div
+        className="absolute inset-0 -z-10 pointer-events-none"
+        aria-hidden="true"
         style={{
           background:
-            'radial-gradient(ellipse 80% 60% at 50% 40%, rgba(99,102,241,0.12) 0%, transparent 70%)',
+            'radial-gradient(ellipse 70% 50% at 50% -10%, rgba(32,227,178,0.18) 0%, transparent 70%)',
         }}
+      />
+
+      {/* Bottom fade to dark */}
+      <div
+        className="absolute bottom-0 left-0 right-0 h-32 -z-10 pointer-events-none"
+        aria-hidden="true"
+        style={{
+          background: 'linear-gradient(to bottom, transparent, #0D1117)',
+        }}
+      />
+
+      {/* Floating constellation particles — z-0, behind text */}
+      <HeroParticles />
+
+      {/* Floating orbs */}
+      <motion.div
+        className="absolute top-1/4 left-1/4 w-72 h-72 rounded-full pointer-events-none -z-10"
+        style={{
+          background: 'radial-gradient(circle, rgba(32,227,178,0.07) 0%, transparent 70%)',
+          filter: 'blur(40px)',
+        }}
+        animate={{ x: [0, 20, 0], y: [0, -20, 0] }}
+        transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut' }}
+        aria-hidden="true"
+      />
+      <motion.div
+        className="absolute bottom-1/3 right-1/4 w-56 h-56 rounded-full pointer-events-none -z-10"
+        style={{
+          background: 'radial-gradient(circle, rgba(32,227,178,0.05) 0%, transparent 70%)',
+          filter: 'blur(30px)',
+        }}
+        animate={{ x: [0, -15, 0], y: [0, 15, 0] }}
+        transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut', delay: 3 }}
         aria-hidden="true"
       />
 
+      {/* Content */}
       <motion.div
         variants={container}
         initial="hidden"
@@ -68,8 +122,8 @@ export default function Hero() {
       >
         {/* Status badge */}
         <motion.div variants={item} className="flex justify-center mb-8">
-          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-accent-indigo/30 bg-accent-indigo/5 text-accent-indigo text-sm font-medium">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-accent-mint/30 bg-accent-mint/5 text-accent-mint text-sm font-medium">
+            <span className="w-2 h-2 rounded-full bg-accent-mint animate-pulse" />
             Disponible para trabajar
           </span>
         </motion.div>
@@ -77,7 +131,7 @@ export default function Hero() {
         {/* Greeting */}
         <motion.p
           variants={item}
-          className="font-mono text-accent-cyan text-base mb-4"
+          className="font-mono text-accent-mint text-base mb-4"
         >
           Hola, soy
         </motion.p>
@@ -88,7 +142,7 @@ export default function Hero() {
           className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-4"
         >
           <span className="text-text-primary">Pedro Julio </span>
-          <span className="gradient-text">Caso</span>
+          <span className="text-accent-mint">Caso</span>
         </motion.h1>
 
         {/* Title */}
@@ -118,7 +172,7 @@ export default function Hero() {
         >
           <button
             onClick={scrollToProjects}
-            className="group flex items-center gap-2 px-6 py-3 rounded-xl bg-accent-indigo hover:bg-accent-indigo-light text-white font-semibold text-sm transition-all duration-200 shadow-lg shadow-accent-indigo/25 hover:shadow-accent-indigo/40 hover:-translate-y-0.5"
+            className="group flex items-center gap-2 px-6 py-3 rounded-xl bg-accent-mint hover:bg-accent-mint-light text-bg-base font-semibold text-sm transition-all duration-200 shadow-lg shadow-accent-mint/20 hover:shadow-accent-mint/35 hover:-translate-y-0.5"
           >
             Ver proyectos
             <ArrowDown className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
@@ -128,7 +182,7 @@ export default function Hero() {
             href="https://github.com/Pxdro-410"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-6 py-3 rounded-xl border border-white/10 text-text-primary text-sm font-semibold hover:border-white/20 hover:bg-white/5 hover:-translate-y-0.5 transition-all duration-200"
+            className="flex items-center gap-2 px-6 py-3 rounded-xl border border-white/10 text-text-primary text-sm font-semibold hover:border-accent-mint/30 hover:bg-accent-mint/5 hover:-translate-y-0.5 transition-all duration-200"
           >
             <GitHubIcon className="w-4 h-4" />
             Ver GitHub
@@ -147,7 +201,7 @@ export default function Hero() {
               target={href.startsWith('mailto') ? undefined : '_blank'}
               rel="noopener noreferrer"
               aria-label={label}
-              className="p-2.5 rounded-lg text-text-muted hover:text-text-secondary hover:bg-white/5 transition-all duration-200 hover:-translate-y-0.5"
+              className="p-2.5 rounded-lg text-text-muted hover:text-accent-mint hover:bg-accent-mint/5 transition-all duration-200 hover:-translate-y-0.5"
             >
               <Icon className="w-5 h-5" />
             </a>
@@ -155,22 +209,23 @@ export default function Hero() {
         </motion.div>
       </motion.div>
 
-      {/* Scroll indicator */}
-      <motion.button
-        onClick={scrollToAbout}
+      {/* Scroll hint */}
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.5 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-text-muted hover:text-text-secondary transition-colors group"
-        aria-label="Scroll down"
+        transition={{ delay: 2 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+        aria-hidden="true"
       >
-        <span className="text-xs font-mono tracking-widest">SCROLL</span>
         <motion.div
           animate={{ y: [0, 6, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
-          className="w-0.5 h-8 bg-gradient-to-b from-accent-indigo to-transparent rounded-full"
+          transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
+          className="w-0.5 h-7 rounded-full"
+          style={{
+            background: 'linear-gradient(to bottom, rgba(32,227,178,0.5), transparent)',
+          }}
         />
-      </motion.button>
+      </motion.div>
     </section>
   )
 }
