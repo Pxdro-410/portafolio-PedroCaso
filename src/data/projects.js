@@ -1,13 +1,10 @@
-/**
- * Projects data
- * ⚠️  PLACEHOLDER — reemplazar con los proyectos reales de Pedro
- *
+/*
  * Estructura de cada proyecto:
  * - id: slug único
  * - title: nombre del proyecto
- * - description: qué problema resuelve (1-2 oraciones directas)
- * - longDescription: por qué tomaste las decisiones técnicas que tomaste
- * - tags: tecnologías usadas (máximo 5-6 para que no se vea saturado)
+ * - description: qué problema resuelve
+ * - longDescription: el por que de las decisiones técnicas
+ * - tags: tecnologías usadas
  * - github: URL al repositorio público
  * - live: URL del deploy (puede ser null si no está desplegado)
  * - featured: true para mostrarlo primero/destacado
@@ -16,9 +13,6 @@
  * - category: 'fullstack' | 'frontend' | 'backend'
  */
 
-// ⚠️  PENDIENTE — Se agregarán los proyectos reales en el siguiente paso del plan de trabajo.
-// Estructura de cada objeto:
-//   id, title, description, tags, github, live, featured, hasBackend, hasDocker, category, gradient
 
 export const projects = [
   {

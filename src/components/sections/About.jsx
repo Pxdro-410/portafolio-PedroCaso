@@ -1,10 +1,7 @@
 import { motion } from 'framer-motion'
 import { useScrollReveal } from '../../hooks/useScrollReveal'
 import { GraduationCap, Code2, Database, Layers, Server } from 'lucide-react'
-
-// ⚠️  Coloca tu foto en src/assets/foto.jpg (o .png) y descomenta el import:
-// import fotoPerfil from '../../assets/foto.jpg'
-const fotoPerfil = null // Elimina esta línea cuando tengas la foto
+import fotoPerfil from '../../assets/foto.jpg'
 
 const HIGHLIGHTS = [
   {
