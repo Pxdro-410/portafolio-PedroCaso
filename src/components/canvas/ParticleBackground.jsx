@@ -14,19 +14,12 @@ export default function ParticleBackground() {
   const SPACING = 28       // px between dots
   const DOT_RADIUS = 1.3   // base dot radius
   const MOUSE_RADIUS = 140 // illumination radius
-  const BASE_OPACITY = 0.10
-  const MAX_OPACITY = 0.85
-  const LERP_SPEED = 0.08  // animation smoothness (0 = instant, 1 = none)
+  const BASE_OPACITY = 0.08
+  const MAX_OPACITY = 0.80
+  const LERP_SPEED = 0.08  // animation smoothness
 
-  // Color interpolation: base gray → indigo/cyan depending on position
-  const getColor = useCallback((dot, canvasWidth) => {
-    const t = dot.x / canvasWidth // 0..1 across the page
-    // Interpolate between indigo (#6366F1) and cyan (#22D3EE)
-    const r = Math.round(99 + (34 - 99) * t)
-    const g = Math.round(102 + (211 - 102) * t)
-    const b = Math.round(241 + (238 - 241) * t)
-    return `rgb(${r},${g},${b})`
-  }, [])
+  // Color: mint (#20E3B2)
+  const COLOR = '#20E3B2'
 
   const buildGrid = useCallback((canvas) => {
     const dots = []
@@ -51,7 +44,6 @@ export default function ParticleBackground() {
     if (!canvas) return
     const ctx = canvas.getContext('2d')
     const { x: mx, y: my } = mouseRef.current
-    const w = canvas.width
 
     ctx.clearRect(0, 0, canvas.width, canvas.height)
 
@@ -60,29 +52,25 @@ export default function ParticleBackground() {
       const dy = dot.y - my
       const dist = Math.sqrt(dx * dx + dy * dy)
 
-      // Calculate target opacity based on distance from mouse
       if (dist < MOUSE_RADIUS) {
-        const proximity = 1 - dist / MOUSE_RADIUS  // 0..1
+        const proximity = 1 - dist / MOUSE_RADIUS
         dot.targetOpacity = BASE_OPACITY + (MAX_OPACITY - BASE_OPACITY) * proximity * proximity
       } else {
         dot.targetOpacity = BASE_OPACITY
       }
 
-      // Smooth lerp toward target
       dot.opacity += (dot.targetOpacity - dot.opacity) * LERP_SPEED
 
-      // Draw dot
-      const color = getColor(dot, w)
       ctx.beginPath()
       ctx.arc(dot.x, dot.y, DOT_RADIUS, 0, Math.PI * 2)
-      ctx.fillStyle = color
+      ctx.fillStyle = COLOR
       ctx.globalAlpha = dot.opacity
       ctx.fill()
     }
 
     ctx.globalAlpha = 1
     animFrameRef.current = requestAnimationFrame(draw)
-  }, [BASE_OPACITY, MAX_OPACITY, MOUSE_RADIUS, LERP_SPEED, DOT_RADIUS, getColor])
+  }, [BASE_OPACITY, MAX_OPACITY, MOUSE_RADIUS, LERP_SPEED, DOT_RADIUS, COLOR])
 
   useEffect(() => {
     const canvas = canvasRef.current
