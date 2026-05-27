@@ -8,7 +8,7 @@ export const techCategories = [
   {
     id: 'frontend',
     label: 'Front-end',
-    color: '#E7BC5C',
+    color: '#20E3B2',
     technologies: [
       {
         name: 'React',
@@ -57,7 +57,7 @@ export const techCategories = [
   {
     id: 'backend',
     label: 'Back-end',
-    color: '#E7BC5C',
+    color: '#20E3B2',
     technologies: [
       {
         name: 'Node.js',
@@ -106,7 +106,7 @@ export const techCategories = [
   {
     id: 'databases',
     label: 'Bases de datos',
-    color: '#E7BC5C',
+    color: '#20E3B2',
     technologies: [
       {
         name: 'PostgreSQL',
@@ -137,7 +137,7 @@ export const techCategories = [
   {
     id: 'devops',
     label: 'DevOps / Tools',
-    color: '#E7BC5C',
+    color: '#20E3B2',
     technologies: [
       {
         name: 'Docker',

@@ -21,11 +21,10 @@ function ProjectCard({ project, index }) {
       exit={{ opacity: 0, scale: 0.95 }}
       transition={{ duration: 0.4, delay: index * 0.08 }}
       whileHover={{ y: -6 }}
-      className={`relative rounded-2xl bg-bg-surface border overflow-hidden group transition-all duration-300 flex flex-col ${
-        project.featured
-          ? 'border-accent-indigo/30 hover:border-accent-indigo/60'
+      className={`relative rounded-2xl bg-bg-surface border overflow-hidden group transition-all duration-300 flex flex-col ${project.featured
+          ? 'border-accent-gold/30 hover:border-accent-gold/60'
           : 'border-white/5 hover:border-white/15'
-      }`}
+        }`}
     >
       {/* Card gradient background */}
       <div
@@ -35,7 +34,7 @@ function ProjectCard({ project, index }) {
 
       {/* Featured badge */}
       {project.featured && (
-        <div className="absolute top-4 right-4 z-10 flex items-center gap-1 px-2.5 py-1 rounded-full bg-accent-indigo/15 border border-accent-indigo/30 text-accent-indigo-light text-xs font-medium">
+        <div className="absolute top-4 right-4 z-10 flex items-center gap-1 px-2.5 py-1 rounded-full bg-accent-gold/15 border border-accent-gold/30 text-accent-gold-light text-xs font-medium">
           <Star className="w-3 h-3 fill-current" />
           Destacado
         </div>
@@ -103,7 +102,7 @@ function ProjectCard({ project, index }) {
               href={project.live}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-accent-cyan hover:text-accent-cyan-light text-xs font-medium transition-colors ml-auto"
+              className="flex items-center gap-1.5 text-accent-gold hover:text-accent-gold-light text-xs font-medium transition-colors ml-auto"
               aria-label={`Ver demo de ${project.title}`}
             >
               Demo en vivo
@@ -145,7 +144,7 @@ export default function Projects() {
           transition={{ duration: 0.5 }}
           className="mb-12"
         >
-          <p className="font-mono text-accent-cyan text-sm mb-3">03. Proyectos</p>
+          <p className="font-mono text-accent-gold text-sm mb-3">03. Proyectos</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-text-primary mb-4">
             Lo que he construido
           </h2>
@@ -171,11 +170,10 @@ export default function Projects() {
               role="tab"
               aria-selected={filter === f.id}
               onClick={() => setFilter(f.id)}
-              className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all duration-200 ${
-                filter === f.id
-                  ? 'bg-accent-indigo text-white shadow-lg shadow-accent-indigo/25'
+              className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all duration-200 ${filter === f.id
+                  ? 'bg-accent-gold text-white shadow-lg shadow-accent-gold/15'
                   : 'bg-bg-surface border border-white/10 text-text-secondary hover:text-text-primary hover:border-white/20'
-              }`}
+                }`}
             >
               {f.label}
               <span className="ml-2 text-xs opacity-60">

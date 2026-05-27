@@ -46,7 +46,7 @@ export default function Contact() {
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 60% 40% at 50% 80%, rgba(99,102,241,0.10) 0%, transparent 70%)',
+          background: 'radial-gradient(ellipse 60% 40% at 50% 80%, rgba(32,227,178,0.07) 0%, transparent 70%)',
         }}
         aria-hidden="true"
       />
@@ -59,11 +59,11 @@ export default function Contact() {
           transition={{ duration: 0.5 }}
           className="mb-12"
         >
-          <p className="font-mono text-accent-cyan text-sm mb-3">04. Contacto</p>
+          <p className="font-mono text-accent-mint text-sm mb-3">04. Contacto</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-text-primary mb-6">
             ¿Hablamos?
           </h2>
-          <div className="w-12 h-0.5 bg-gradient-to-r from-accent-indigo to-accent-cyan rounded-full mx-auto mb-8" />
+          <div className="w-12 h-0.5 bg-accent-mint rounded-full mx-auto mb-8" />
 
           <p className="text-text-secondary text-base sm:text-lg leading-relaxed max-w-xl mx-auto">
             Estoy abierto a oportunidades laborales, colaboraciones, o simplemente

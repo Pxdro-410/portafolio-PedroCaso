@@ -1,35 +1,46 @@
 import { motion } from 'framer-motion'
 import { useScrollReveal } from '../../hooks/useScrollReveal'
-import { GraduationCap, Code2, Database, Layers } from 'lucide-react'
+import { GraduationCap, Code2, Database, Layers, Server } from 'lucide-react'
+
+// ⚠️  Coloca tu foto en src/assets/foto.jpg (o .png) y descomenta el import:
+// import fotoPerfil from '../../assets/foto.jpg'
+const fotoPerfil = null // Elimina esta línea cuando tengas la foto
 
 const HIGHLIGHTS = [
   {
     icon: Code2,
-    color: '#6366F1',
-    bg: 'rgba(99,102,241,0.08)',
+    color: '#20E3B2',
+    bg: 'rgba(32,227,178,0.08)',
     label: 'Front-end',
-    description: 'React, SPAs, interfaces interactivas y animaciones.',
+    description: 'React, SPAs, interfaces interactivas y animaciones con Framer Motion.',
+  },
+  {
+    icon: Server,
+    color: '#8B949E',
+    bg: 'rgba(139,148,158,0.08)',
+    label: 'Back-end',
+    description: 'Node.js, Express, Nitro — APIs REST y servicios con autenticación JWT.',
   },
   {
     icon: Database,
-    color: '#22D3EE',
-    bg: 'rgba(34,211,238,0.08)',
+    color: '#60A5FA',
+    bg: 'rgba(96,165,250,0.08)',
     label: 'Bases de datos',
-    description: 'Diseño de esquemas, consultas optimizadas, PostgreSQL y MongoDB.',
+    description: 'PostgreSQL, MariaDB, MySQL, SQLite — diseño de esquemas y consultas optimizadas.',
   },
   {
     icon: Layers,
-    color: '#F59E0B',
-    bg: 'rgba(245,158,11,0.08)',
+    color: '#34D399',
+    bg: 'rgba(52,211,153,0.08)',
     label: 'Full-Stack',
-    description: 'APIs REST con Node.js, autenticación JWT y Docker Compose.',
+    description: 'Docker Compose, entornos reproducibles, deploy en PaaS.',
   },
   {
     icon: GraduationCap,
-    color: '#84CC16',
-    bg: 'rgba(132,204,22,0.08)',
+    color: '#F5F5F0',
+    bg: 'rgba(245,245,240,0.05)',
     label: 'Formación',
-    description: 'Ingeniería en Ciencias de la Computación — en curso.',
+    description: 'Ingeniería en Ciencias de la Computación — UVG, en curso.',
   },
 ]
 
@@ -51,10 +62,10 @@ export default function About() {
       ref={ref}
       className="relative py-24 px-6"
     >
-      {/* Section glow */}
+      {/* Section separator — clean top border, no glow bleeding into hero */}
       <div
-        className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-48 pointer-events-none"
-        style={{ background: 'radial-gradient(ellipse, rgba(99,102,241,0.08) 0%, transparent 70%)' }}
+        className="absolute top-0 left-0 right-0 h-px pointer-events-none"
+        style={{ background: 'linear-gradient(to right, transparent, rgba(32,227,178,0.2), transparent)' }}
         aria-hidden="true"
       />
 
@@ -66,59 +77,89 @@ export default function About() {
           transition={{ duration: 0.5 }}
           className="mb-16"
         >
-          <p className="font-mono text-accent-cyan text-sm mb-3">01. Sobre mí</p>
+          <p className="font-mono text-accent-mint text-sm mb-3">01. Sobre mí</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-text-primary mb-6">
             Quién soy y qué construyo
           </h2>
-          <div className="w-12 h-0.5 bg-gradient-to-r from-accent-indigo to-accent-cyan rounded-full" />
+          <div className="w-12 h-0.5 bg-accent-mint rounded-full opacity-60" />
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* Bio text */}
+          {/* Bio text + photo */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={visible ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="space-y-5"
+            className="space-y-6"
           >
-            <p className="text-text-secondary leading-relaxed text-base">
-              Soy <span className="text-text-primary font-medium">Pedro Julio Caso</span>,
-              estudiante de <span className="text-accent-indigo font-medium">Ingeniería en Ciencias
-              de la Computación</span> con 22 años. Me apasiona construir
-              software que resuelve problemas reales — desde interfaces que se sientan rápidas
-              y fluidas hasta bases de datos bien diseñadas que escalen sin romperse.
-            </p>
+            {/* Profile photo — visible when fotoPerfil is set */}
+            {fotoPerfil ? (
+              <div className="flex items-center gap-5">
+                <div className="relative flex-shrink-0">
+                  <div
+                    className="w-20 h-20 rounded-2xl overflow-hidden border-2"
+                    style={{ borderColor: 'rgba(32,227,178,0.4)' }}
+                  >
+                    <img
+                      src={fotoPerfil}
+                      alt="Pedro Julio Caso"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  {/* Mint glow ring */}
+                  <div
+                    className="absolute inset-0 rounded-2xl pointer-events-none"
+                    style={{ boxShadow: '0 0 20px rgba(32,227,178,0.2)' }}
+                  />
+                </div>
+                <div>
+                  <h3 className="text-text-primary font-semibold">Pedro Julio Caso</h3>
+                  <p className="text-text-secondary text-sm">Desarrollador Full-Stack · UVG</p>
+                </div>
+              </div>
+            ) : (
+              /* Placeholder cuando no hay foto */
+              <div className="flex items-center gap-5">
+                <div
+                  className="w-20 h-20 rounded-2xl border border-dashed border-accent-mint/30 flex items-center justify-center flex-shrink-0"
+                  title="Coloca tu foto en src/assets/foto.jpg"
+                >
+                  <span className="text-2xl font-bold text-accent-mint">PC</span>
+                </div>
+                <div>
+                  <h3 className="text-text-primary font-semibold">Pedro Julio Caso</h3>
+                  <p className="text-text-secondary text-sm">Desarrollador Full-Stack · UVG</p>
+                </div>
+              </div>
+            )}
 
             <p className="text-text-secondary leading-relaxed text-base">
-              Mi enfoque es <span className="text-text-primary font-medium">pensar antes de escribir
-              código</span>. Elijo las herramientas según el problema, no al revés. Cuando
-              construyo algo, me pregunto: ¿tiene sentido el stack? ¿Puedo defenderlo en una
-              conversación técnica? ¿El README explica qué hace y por qué, no solo cómo instalarlo?
-            </p>
-
-            <p className="text-text-secondary leading-relaxed text-base">
-              Tengo especial interés en el <span className="text-accent-cyan font-medium">frontend
-              y las bases de datos</span> — ese punto donde la experiencia del usuario se encuentra
-              con la integridad de los datos. La mayoría de mis proyectos tienen las dos capas.
+              Soy estudiante de Ciencias de la Computación en la{' '}
+              <span className="text-text-primary font-medium">Universidad del Valle de Guatemala (UVG)</span>{' '}
+              y Desarrollador Full-Stack Junior. A lo largo de mis últimos años programando,
+              incluyendo mi experiencia como becado en ITM, he desarrollado una fuerte vocación
+              por conectar ambos extremos del desarrollo: la creación de interfaces web intuitivas
+              y el modelado robusto de bases de datos. Mi enfoque siempre está en entender el
+              problema a fondo para diseñar la solución más eficiente posible.
             </p>
 
             {/* Quick stats */}
-            <div className="grid grid-cols-3 gap-4 pt-4">
+            <div className="grid grid-cols-3 gap-4 pt-2">
               {[
-                { value: '27+', label: 'Repositorios públicos' },
-                { value: '3+', label: 'Años programando' },
+                { value: '26+', label: 'Repositorios públicos' },
+                { value: '2+', label: 'Años programando' },
                 { value: '2', label: 'Idiomas' },
               ].map(({ value, label }) => (
                 <div key={label} className="text-center p-4 rounded-xl bg-bg-surface border border-white/5">
-                  <div className="text-2xl font-bold gradient-text mb-1">{value}</div>
+                  <div className="text-2xl font-bold text-accent-mint mb-1">{value}</div>
                   <div className="text-xs text-text-muted leading-tight">{label}</div>
                 </div>
               ))}
             </div>
           </motion.div>
 
-          {/* Highlight cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {/* Highlight cards — 5 items in responsive grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {HIGHLIGHTS.map(({ icon: Icon, color, bg, label, description }, i) => (
               <motion.div
                 key={label}
