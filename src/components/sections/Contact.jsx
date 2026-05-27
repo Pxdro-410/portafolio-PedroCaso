@@ -25,7 +25,7 @@ const CONTACT_LINKS = [
   {
     label: 'Email',
     description: 'Escríbeme directo',
-    href: 'mailto:pedrojuliocas@gmail.com',
+    href: 'mailto:pedrojuliocaso@gmail.com',
     icon: Mail,
     color: '#22D3EE',
     bg: 'rgba(34,211,238,0.08)',
