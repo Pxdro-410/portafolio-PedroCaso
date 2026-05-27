@@ -8,24 +8,24 @@ export default {
     extend: {
       colors: {
         bg: {
-          base: '#060C18',
-          surface: '#0D1424',
-          elevated: '#111827',
+          base: '#0D1117',
+          surface: '#161B22',
+          elevated: '#1C2128',
         },
         accent: {
-          indigo: '#6366F1',
-          cyan: '#22D3EE',
-          'indigo-light': '#818CF8',
-          'cyan-light': '#67E8F9',
+          mint: '#20E3B2',
+          'mint-light': '#5EEFD0',
+          'mint-dim': '#0FAF88',
+          white: '#F5F5F0',
         },
         text: {
-          primary: '#F1F5F9',
-          secondary: '#94A3B8',
-          muted: '#475569',
+          primary: '#F5F5F0',
+          secondary: '#8B949E',
+          muted: '#484F58',
         },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Geist', 'system-ui', 'sans-serif'],
         mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
       },
       animation: {
@@ -56,4 +56,3 @@ export default {
   },
   plugins: [],
 }
-
