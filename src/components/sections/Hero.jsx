@@ -160,9 +160,8 @@ export default function Hero() {
           variants={item}
           className="text-text-secondary text-base sm:text-lg max-w-2xl mx-auto leading-relaxed mb-10"
         >
-          Construyo SPAs con React, APIs REST con Node.js y entornos reproducibles con Docker.
-          Me especializo en frontend y bases de datos — me interesa que las cosas funcionen
-          bien, no solo que compilen.
+          Construyo SPAs, APIs REST, bases de datos hasta BCNF y entornos reproducibles con Docker.
+          Me especializo en frontend y bases de datos, disfruto construir soluciones eficientes, escalables y mantenibles.
         </motion.p>
 
         {/* CTA Buttons */}

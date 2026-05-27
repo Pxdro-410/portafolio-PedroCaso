@@ -66,8 +66,8 @@ export default function Contact() {
           <div className="w-12 h-0.5 bg-accent-mint rounded-full mx-auto mb-8" />
 
           <p className="text-text-secondary text-base sm:text-lg leading-relaxed max-w-xl mx-auto">
-            Estoy abierto a oportunidades laborales, colaboraciones, o simplemente
-            hablar sobre tecnología. Si crees que encajo en tu equipo, escríbeme.
+            Estoy abierto a oportunidades laborales, colaboraciones, o trabajos en proyectos para ganar experiencia,
+            si te interesan mis servicios, no dudes en contactarme.
           </p>
         </motion.div>
 
