@@ -61,7 +61,7 @@ export default function Contact() {
         >
           <p className="font-mono text-accent-mint text-sm mb-3">04. Contacto</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-text-primary mb-6">
-            ¿Hablamos?
+            Contacto
           </h2>
           <div className="w-12 h-0.5 bg-accent-mint rounded-full mx-auto mb-8" />
 
@@ -120,7 +120,7 @@ export default function Contact() {
           transition={{ delay: 0.7 }}
           className="mt-16 text-text-muted text-xs font-mono"
         >
-          Construido con React + Vite · Animaciones con Framer Motion · Deployed en Vercel
+          Construido con React + Vite · Animaciones con Framer Motion · Hecho por Pedro Caso
         </motion.p>
       </div>
     </section>
