@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Dark background -->
+  <rect width="32" height="32" rx="7" fill="#0D1117"/>
+  <!-- Blue border -->
+  <rect x="0.5" y="0.5" width="31" height="31" rx="6.5" stroke="#3B82F6" stroke-width="1.5"/>
+  <!-- White letters -->
+  <text x="4" y="22" font-family="system-ui, sans-serif" font-weight="700" font-size="15" fill="#F5F5F0">P</text>
+  <text x="16" y="22" font-family="system-ui, sans-serif" font-weight="700" font-size="15" fill="#F5F5F0">C</text>
+</svg>
