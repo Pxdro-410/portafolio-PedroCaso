@@ -52,6 +52,18 @@ export const techCategories = [
         bg: 'rgba(187, 92, 248, 0.08)',
         rationale: 'Animaciones declarativas integradas con React lifecycle',
       },
+      {
+        name: 'React Router',
+        color: '#F59E0B',
+        bg: 'rgba(245, 158, 11, 0.08)',
+        rationale: 'Enrutamiento client-side con rutas anidadas y lazy loading',
+      },
+      {
+        name: 'Storybook',
+        color: '#FF4785',
+        bg: 'rgba(255, 71, 133, 0.08)',
+        rationale: 'Documentación y desarrollo de componentes en aislamiento',
+      },
     ],
   },
   {
@@ -101,6 +113,12 @@ export const techCategories = [
         bg: 'rgba(0, 105, 253, 0.08)',
         rationale: 'Excelente para APIs y servicios de alto rendimiento',
       },
+      {
+        name: 'JWT',
+        color: '#D97706',
+        bg: 'rgba(217, 119, 6, 0.08)',
+        rationale: 'Autenticación stateless, tokens firmados sin sesión en servidor',
+      },
     ],
   },
   {
@@ -110,7 +128,7 @@ export const techCategories = [
     technologies: [
       {
         name: 'PostgreSQL',
-        color: '#0564b3',
+        color: '#1581da',
         bg: 'rgba(51, 103, 145, 0.12)',
         rationale: 'RDBMS robusto con soporte ACID completo',
       },
@@ -143,7 +161,7 @@ export const techCategories = [
         name: 'Docker',
         color: '#2496ED',
         bg: 'rgba(36, 150, 237, 0.08)',
-        rationale: 'Entornos reproducibles, dev ↔ prod sin diferencias',
+        rationale: 'Entornos reproducibles, dev/prod sin diferencias',
       },
       {
         name: 'Git / GitHub',
@@ -174,6 +192,18 @@ export const techCategories = [
         color: '#f5a7a7',
         bg: 'rgba(255, 128, 123, 0.08)',
         rationale: 'Herramienta para probar y documentar APIs REST',
+      },
+      {
+        name: 'Vitest',
+        color: '#6EE7B7',
+        bg: 'rgba(110, 231, 183, 0.08)',
+        rationale: 'Test runner integrado con Vite, más rápido que Jest en proyectos React',
+      },
+      {
+        name: 'ESLint',
+        color: '#8B5CF6',
+        bg: 'rgba(139, 92, 246, 0.08)',
+        rationale: 'Linting estático para mantener consistencia y buenas prácticas',
       },
     ],
   },

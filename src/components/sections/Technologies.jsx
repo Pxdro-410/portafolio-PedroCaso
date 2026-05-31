@@ -148,7 +148,7 @@ export default function Technologies() {
                       </span>
 
                       {/* Tooltip with rationale */}
-                      <div className="absolute -top-10 left-1/2 -translate-x-1/2 bg-bg-elevated border border-white/10 text-xs text-text-secondary rounded-lg px-3 py-2 whitespace-nowrap opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-200 z-10 shadow-xl max-w-xs text-center">
+                      <div className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-bg-elevated border border-white/10 text-xs text-text-secondary rounded-lg px-3 py-2 w-max max-w-[200px] text-center leading-relaxed opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-200 z-10 shadow-xl">
                         {tech.rationale}
                       </div>
                     </motion.div>
