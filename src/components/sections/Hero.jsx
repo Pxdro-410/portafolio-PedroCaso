@@ -147,7 +147,7 @@ export default function Hero() {
 
         {/* Title */}
         <motion.div variants={item} className="mb-6">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-light text-text-secondary">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-light text-text-primary">
             Desarrollador{' '}
             <span className="text-text-primary font-medium">Full-Stack</span>
             {' '}·{' '}

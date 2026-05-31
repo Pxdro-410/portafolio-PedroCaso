@@ -51,8 +51,7 @@ export default function Technologies() {
           </h2>
           <div className="w-12 h-0.5 bg-accent-mint rounded-full mb-6" />
           <p className="text-text-secondary max-w-2xl leading-relaxed text-sm sm:text-base">
-            No es una lista de lo que puedo googlear. Es el stack que elegí, con el que he
-            construido proyectos reales, y que puedo defender técnicamente.
+            Estas son las tecnologías con las que me siento cómodo trabajando y que elijo para mis proyectos. Hice esta selección basada en mi experiencia personal, la madurez del ecosistema, y cómo cada una se alinea con los requisitos típicos de las aplicaciones web modernas.
           </p>
         </motion.div>
 
@@ -79,7 +78,7 @@ export default function Technologies() {
               onClick={() => setActiveCategory(activeCategory === cat.id ? null : cat.id)}
               className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all duration-200 ${
                 activeCategory === cat.id
-                  ? 'text-white shadow-lg'
+                  ? 'text-black shadow-lg'
                   : 'bg-bg-surface border border-white/10 text-text-secondary hover:text-text-primary hover:border-white/20'
               }`}
               style={
