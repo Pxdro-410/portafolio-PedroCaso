@@ -26,6 +26,7 @@ export default {
       },
       fontFamily: {
         sans: ['Geist', 'system-ui', 'sans-serif'],
+        serif: ['Lora', 'Georgia', 'serif'],
         mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
       },
       animation: {

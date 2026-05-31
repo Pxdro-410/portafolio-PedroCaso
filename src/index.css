@@ -44,6 +44,11 @@
     color: #F5F5F0;
   }
 
+  /* Lora para todos los headings */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lora', Georgia, serif;
+  }
+
   /* Sections snap to viewport on mouse wheel */
   section {
     scroll-snap-align: start;
