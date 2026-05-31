@@ -1,4 +1,3 @@
-
 export function GitHubIcon({ className, style }) {
   return (
     <svg

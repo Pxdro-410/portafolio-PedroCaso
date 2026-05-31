@@ -8,8 +8,8 @@ import { useEffect, useRef } from 'react'
  */
 
 const PARTICLE_COUNT = 55
-const CONNECTION_DIST = 120   // px para dibujar línea entre partículas
-const MINT = '32, 227, 178'   // rgb sin #, para usar en rgba()
+const CONNECTION_DIST = 120 // px para dibujar línea entre partículas
+const MINT = '32, 227, 178' // rgb sin #, para usar en rgba()
 
 function rand(min, max) {
   return Math.random() * (max - min) + min

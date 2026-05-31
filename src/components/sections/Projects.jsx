@@ -3,7 +3,15 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useScrollReveal } from '../../hooks/useScrollReveal'
 import { projects } from '../../data/projects'
 import { techCategories } from '../../data/technologies'
-import { ExternalLink, Server, Container, Star, X, ChevronRight, Lightbulb } from 'lucide-react'
+import {
+  ExternalLink,
+  Server,
+  Container,
+  Star,
+  X,
+  ChevronRight,
+  Lightbulb,
+} from 'lucide-react'
 import { GitHubIcon } from '../ui/SocialIcons'
 
 const FILTERS = [
@@ -15,12 +23,12 @@ const FILTERS = [
 
 const GRADIENT_COLORS = {
   'from-indigo-500/20 to-violet-500/20': ['#818CF8', '#A78BFA'],
-  'from-blue-500/20 to-cyan-500/20':     ['#60A5FA', '#22D3EE'],
-  'from-orange-500/20 to-red-500/20':    ['#FB923C', '#EF4444'],
-  'from-red-500/20 to-rose-500/20':      ['#EF4444', '#FB7185'],
+  'from-blue-500/20 to-cyan-500/20': ['#60A5FA', '#22D3EE'],
+  'from-orange-500/20 to-red-500/20': ['#FB923C', '#EF4444'],
+  'from-red-500/20 to-rose-500/20': ['#EF4444', '#FB7185'],
   'from-emerald-500/20 to-green-500/20': ['#34D399', '#4ADE80'],
-  'from-purple-500/20 to-fuchsia-500/20':['#C084FC', '#E879F9'],
-  'from-sky-500/20 to-blue-500/20':      ['#38BDF8', '#60A5FA'],
+  'from-purple-500/20 to-fuchsia-500/20': ['#C084FC', '#E879F9'],
+  'from-sky-500/20 to-blue-500/20': ['#38BDF8', '#60A5FA'],
 }
 
 // Maps tech name → { color, bg } from the Technologies section data
@@ -78,7 +86,9 @@ function ProjectCard({ project, onOpen, index }) {
       {/* Tinted hover overlay */}
       <div
         className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none"
-        style={{ background: `radial-gradient(ellipse at top center, ${colorA}18 0%, transparent 65%)` }}
+        style={{
+          background: `radial-gradient(ellipse at top center, ${colorA}18 0%, transparent 65%)`,
+        }}
         aria-hidden="true"
       />
 
@@ -117,7 +127,10 @@ function ProjectCard({ project, onOpen, index }) {
           className="flex items-center gap-1 text-xs pt-1.5 border-t border-white/5 transition-opacity duration-200"
           style={{ color: colorA, opacity: 0.55 }}
         >
-          <span className="group-hover:opacity-100 transition-opacity" style={{ opacity: 1 }}>
+          <span
+            className="group-hover:opacity-100 transition-opacity"
+            style={{ opacity: 1 }}
+          >
             Ver detalles
           </span>
           <ChevronRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
@@ -171,7 +184,11 @@ function ProjectModal({ project, onClose }) {
               {project.featured && (
                 <span
                   className="flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium border"
-                  style={{ color: colorA, backgroundColor: `${colorA}12`, borderColor: `${colorA}35` }}
+                  style={{
+                    color: colorA,
+                    backgroundColor: `${colorA}12`,
+                    borderColor: `${colorA}35`,
+                  }}
                 >
                   <Star className="w-3 h-3 fill-current" />
                   Destacado
@@ -206,7 +223,10 @@ function ProjectModal({ project, onClose }) {
           <div className="overflow-y-auto p-6 space-y-5 md:border-r border-white/6">
             {/* Description */}
             <div>
-              <p className="text-xs font-mono uppercase tracking-widest mb-2" style={{ color: colorA, opacity: 0.7 }}>
+              <p
+                className="text-xs font-mono uppercase tracking-widest mb-2"
+                style={{ color: colorA, opacity: 0.7 }}
+              >
                 Descripción
               </p>
               <p className="text-sm text-text-secondary leading-relaxed">
@@ -220,8 +240,14 @@ function ProjectModal({ project, onClose }) {
               style={{ backgroundColor: `${colorA}08`, borderColor: `${colorA}25` }}
             >
               <div className="flex items-center gap-2 mb-2.5">
-                <Lightbulb className="w-3.5 h-3.5 flex-shrink-0" style={{ color: colorA }} />
-                <p className="text-xs font-mono uppercase tracking-widest" style={{ color: colorA }}>
+                <Lightbulb
+                  className="w-3.5 h-3.5 flex-shrink-0"
+                  style={{ color: colorA }}
+                />
+                <p
+                  className="text-xs font-mono uppercase tracking-widest"
+                  style={{ color: colorA }}
+                >
                   ¿Por qué estas tecnologías?
                 </p>
               </div>
@@ -286,7 +312,8 @@ export default function Projects() {
   const [filter, setFilter] = useState('all')
   const [selectedProject, setSelectedProject] = useState(null)
 
-  const filtered = filter === 'all' ? projects : projects.filter((p) => p.category === filter)
+  const filtered =
+    filter === 'all' ? projects : projects.filter((p) => p.category === filter)
 
   return (
     <section id="projects" ref={ref} className="relative py-24 px-6">
@@ -331,13 +358,20 @@ export default function Projects() {
               }`}
               style={
                 filter === f.id
-                  ? { backgroundColor: '#20E3B2', boxShadow: '0 4px 16px rgba(32,227,178,0.2)' }
+                  ? {
+                      backgroundColor: '#20E3B2',
+                      boxShadow: '0 4px 16px rgba(32,227,178,0.2)',
+                    }
                   : {}
               }
             >
               {f.label}
               <span className="ml-2 text-xs opacity-60">
-                ({f.id === 'all' ? projects.length : projects.filter((p) => p.category === f.id).length})
+                (
+                {f.id === 'all'
+                  ? projects.length
+                  : projects.filter((p) => p.category === f.id).length}
+                )
               </span>
             </button>
           ))}
@@ -345,7 +379,11 @@ export default function Projects() {
 
         {/* Projects grid */}
         <AnimatePresence mode="wait">
-          <motion.div key={filter} layout className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <motion.div
+            key={filter}
+            layout
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-5"
+          >
             {filtered.map((project, i) => (
               <ProjectCard
                 key={project.id}
@@ -364,7 +402,9 @@ export default function Projects() {
           transition={{ delay: 0.6 }}
           className="mt-14 text-center"
         >
-          <p className="text-text-secondary text-sm mb-4">¿Quieres ver el resto de proyectos?</p>
+          <p className="text-text-secondary text-sm mb-4">
+            ¿Quieres ver el resto de proyectos?
+          </p>
           <a
             href="https://github.com/Pxdro-410"
             target="_blank"

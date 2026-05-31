@@ -21,19 +21,18 @@ export default function Technologies() {
   const [activeCategory, setActiveCategory] = useState(null)
 
   const displayedCategories = activeCategory
-    ? techCategories.filter(c => c.id === activeCategory)
+    ? techCategories.filter((c) => c.id === activeCategory)
     : techCategories
 
   return (
-    <section
-      id="technologies"
-      ref={ref}
-      className="relative py-24 px-6"
-    >
+    <section id="technologies" ref={ref} className="relative py-24 px-6">
       {/* Background accent */}
       <div
         className="absolute right-0 top-1/2 -translate-y-1/2 w-64 h-64 pointer-events-none"
-        style={{ background: 'radial-gradient(ellipse, rgba(32,227,178,0.05) 0%, transparent 70%)' }}
+        style={{
+          background:
+            'radial-gradient(ellipse, rgba(32,227,178,0.05) 0%, transparent 70%)',
+        }}
         aria-hidden="true"
       />
 
@@ -51,7 +50,10 @@ export default function Technologies() {
           </h2>
           <div className="w-12 h-0.5 bg-accent-mint rounded-full mb-6" />
           <p className="text-text-secondary max-w-2xl leading-relaxed text-sm sm:text-base">
-            Estas son las tecnologías con las que me siento cómodo trabajando y que elijo para mis proyectos. Hice esta selección basada en mi experiencia personal, la madurez del ecosistema, y cómo cada una se alinea con los requisitos típicos de las aplicaciones web modernas.
+            Estas son las tecnologías con las que me siento cómodo trabajando y que elijo
+            para mis proyectos. Hice esta selección basada en mi experiencia personal, la
+            madurez del ecosistema, y cómo cada una se alinea con los requisitos típicos
+            de las aplicaciones web modernas.
           </p>
         </motion.div>
 
@@ -72,7 +74,7 @@ export default function Technologies() {
           >
             Todos
           </button>
-          {techCategories.map(cat => (
+          {techCategories.map((cat) => (
             <button
               key={cat.id}
               onClick={() => setActiveCategory(activeCategory === cat.id ? null : cat.id)}
@@ -139,10 +141,7 @@ export default function Technologies() {
                         className="w-2 h-2 rounded-full flex-shrink-0"
                         style={{ backgroundColor: tech.color }}
                       />
-                      <span
-                        className="text-sm font-medium"
-                        style={{ color: tech.color }}
-                      >
+                      <span className="text-sm font-medium" style={{ color: tech.color }}>
                         {tech.name}
                       </span>
 
@@ -167,7 +166,10 @@ export default function Technologies() {
         >
           <div
             className="absolute inset-0 opacity-30 pointer-events-none rounded-2xl"
-            style={{ background: 'radial-gradient(ellipse at top left, rgba(32,227,178,0.06) 0%, transparent 60%)' }}
+            style={{
+              background:
+                'radial-gradient(ellipse at top left, rgba(32,227,178,0.06) 0%, transparent 60%)',
+            }}
             aria-hidden="true"
           />
 

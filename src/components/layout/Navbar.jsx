@@ -22,17 +22,17 @@ export default function Navbar() {
 
   // Highlight active section on scroll
   useEffect(() => {
-    const sections = NAV_LINKS.map(l => l.href.slice(1))
+    const sections = NAV_LINKS.map((l) => l.href.slice(1))
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach(entry => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) setActiveSection(entry.target.id)
         })
       },
       { threshold: 0.4 }
     )
 
-    sections.forEach(id => {
+    sections.forEach((id) => {
       const el = document.getElementById(id)
       if (el) observer.observe(el)
     })
@@ -64,9 +64,13 @@ export default function Navbar() {
           onClick={(e) => handleLinkClick(e, '#hero')}
           className="font-mono text-sm font-medium group"
         >
-          <span className="text-accent-mint group-hover:text-accent-mint-light transition-colors">&lt;</span>
+          <span className="text-accent-mint group-hover:text-accent-mint-light transition-colors">
+            &lt;
+          </span>
           <span className="text-text-primary mx-1">Pedro Caso</span>
-          <span className="text-accent-mint/70 group-hover:text-accent-mint transition-colors">/&gt;</span>
+          <span className="text-accent-mint/70 group-hover:text-accent-mint transition-colors">
+            /&gt;
+          </span>
         </a>
 
         {/* Desktop links */}

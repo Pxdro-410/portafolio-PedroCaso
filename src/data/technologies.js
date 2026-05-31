@@ -197,7 +197,8 @@ export const techCategories = [
         name: 'Vitest',
         color: '#6EE7B7',
         bg: 'rgba(110, 231, 183, 0.08)',
-        rationale: 'Test runner integrado con Vite, más rápido que Jest en proyectos React',
+        rationale:
+          'Test runner integrado con Vite, más rápido que Jest en proyectos React',
       },
       {
         name: 'ESLint',

@@ -95,7 +95,8 @@ export default function Hero() {
       <motion.div
         className="absolute top-1/4 left-1/4 w-72 h-72 rounded-full pointer-events-none -z-10"
         style={{
-          background: 'radial-gradient(circle, rgba(32,227,178,0.07) 0%, transparent 70%)',
+          background:
+            'radial-gradient(circle, rgba(32,227,178,0.07) 0%, transparent 70%)',
           filter: 'blur(40px)',
         }}
         animate={{ x: [0, 20, 0], y: [0, -20, 0] }}
@@ -105,7 +106,8 @@ export default function Hero() {
       <motion.div
         className="absolute bottom-1/3 right-1/4 w-56 h-56 rounded-full pointer-events-none -z-10"
         style={{
-          background: 'radial-gradient(circle, rgba(32,227,178,0.05) 0%, transparent 70%)',
+          background:
+            'radial-gradient(circle, rgba(32,227,178,0.05) 0%, transparent 70%)',
           filter: 'blur(30px)',
         }}
         animate={{ x: [0, -15, 0], y: [0, 15, 0] }}
@@ -129,10 +131,7 @@ export default function Hero() {
         </motion.div>
 
         {/* Greeting */}
-        <motion.p
-          variants={item}
-          className="font-mono text-accent-mint text-base mb-4"
-        >
+        <motion.p variants={item} className="font-mono text-accent-mint text-base mb-4">
           Hola, soy
         </motion.p>
 
@@ -149,8 +148,7 @@ export default function Hero() {
         <motion.div variants={item} className="mb-6">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-light text-text-primary">
             Desarrollador{' '}
-            <span className="text-text-primary font-medium">Full-Stack</span>
-            {' '}·{' '}
+            <span className="text-text-primary font-medium">Full-Stack</span> ·{' '}
             <span className="text-text-primary font-medium">Ingeniería en CC</span>
           </h2>
         </motion.div>
@@ -160,8 +158,9 @@ export default function Hero() {
           variants={item}
           className="text-text-secondary text-base sm:text-lg max-w-2xl mx-auto leading-relaxed mb-10"
         >
-          Construyo SPAs, APIs REST, bases de datos hasta BCNF y entornos reproducibles con Docker.
-          Me especializo en frontend y bases de datos, disfruto construir soluciones eficientes, escalables y mantenibles.
+          Construyo SPAs, APIs REST, bases de datos hasta BCNF y entornos reproducibles
+          con Docker. Me especializo en frontend y bases de datos, disfruto construir
+          soluciones eficientes, escalables y mantenibles.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -189,10 +188,7 @@ export default function Hero() {
         </motion.div>
 
         {/* Social links */}
-        <motion.div
-          variants={item}
-          className="flex items-center justify-center gap-4"
-        >
+        <motion.div variants={item} className="flex items-center justify-center gap-4">
           {SOCIAL_LINKS.map(({ label, href, icon: Icon }) => (
             <a
               key={label}

@@ -15,8 +15,8 @@
   }
 
   body {
-    background-color: #0D1117;
-    color: #F5F5F0;
+    background-color: #0d1117;
+    color: #f5f5f0;
     font-family: 'Geist', system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -28,24 +28,29 @@
     width: 6px;
   }
   ::-webkit-scrollbar-track {
-    background: #0D1117;
+    background: #0d1117;
   }
   ::-webkit-scrollbar-thumb {
-    background: #20E3B2;
+    background: #20e3b2;
     border-radius: 3px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #5EEFD0;
+    background: #5eefd0;
   }
 
   /* Selection color */
   ::selection {
     background-color: rgba(32, 227, 178, 0.25);
-    color: #F5F5F0;
+    color: #f5f5f0;
   }
 
   /* Lora para todos los headings */
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: 'Lora', Georgia, serif;
   }
 
@@ -58,7 +63,7 @@
 @layer utilities {
   /* Mint accent text — sólido, sin degradado */
   .accent-text {
-    color: #20E3B2;
+    color: #20e3b2;
   }
 
   /* Mint border on cards */
@@ -72,11 +77,13 @@
     inset: 0;
     border-radius: inherit;
     padding: 1px;
-    background: linear-gradient(135deg, #20E3B2, rgba(32, 227, 178, 0.3));
-    -webkit-mask: linear-gradient(#fff 0 0) content-box,
-                  linear-gradient(#fff 0 0);
-    mask: linear-gradient(#fff 0 0) content-box,
-          linear-gradient(#fff 0 0);
+    background: linear-gradient(135deg, #20e3b2, rgba(32, 227, 178, 0.3));
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     pointer-events: none;
@@ -84,16 +91,17 @@
 
   /* Mint glow */
   .glow-mint {
-    box-shadow: 0 0 20px rgba(32, 227, 178, 0.25),
-                0 0 60px rgba(32, 227, 178, 0.08);
+    box-shadow:
+      0 0 20px rgba(32, 227, 178, 0.25),
+      0 0 60px rgba(32, 227, 178, 0.08);
   }
 
   /* Keep gradient-text and text-gradient as aliases for compatibility */
   .gradient-text {
-    color: #20E3B2;
+    color: #20e3b2;
   }
 
   .text-gradient {
-    color: #20E3B2;
+    color: #20e3b2;
   }
 }

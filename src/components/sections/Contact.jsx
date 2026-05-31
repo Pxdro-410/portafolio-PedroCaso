@@ -37,16 +37,13 @@ export default function Contact() {
   const [ref, visible] = useScrollReveal()
 
   return (
-    <section
-      id="contact"
-      ref={ref}
-      className="relative py-24 px-6 pb-32"
-    >
+    <section id="contact" ref={ref} className="relative py-24 px-6 pb-32">
       {/* Center glow */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 60% 40% at 50% 80%, rgba(32,227,178,0.07) 0%, transparent 70%)',
+          background:
+            'radial-gradient(ellipse 60% 40% at 50% 80%, rgba(32,227,178,0.07) 0%, transparent 70%)',
         }}
         aria-hidden="true"
       />
@@ -66,51 +63,48 @@ export default function Contact() {
           <div className="w-12 h-0.5 bg-accent-mint rounded-full mx-auto mb-8" />
 
           <p className="text-text-secondary text-base sm:text-lg leading-relaxed max-w-xl mx-auto">
-            Estoy abierto a oportunidades laborales, colaboraciones, o trabajos en proyectos para ganar experiencia,
-            si te interesan mis servicios, no dudes en contactarme.
+            Estoy abierto a oportunidades laborales, colaboraciones, o trabajos en
+            proyectos para ganar experiencia, si te interesan mis servicios, no dudes en
+            contactarme.
           </p>
         </motion.div>
 
         {/* Contact cards */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          {CONTACT_LINKS.map(({ label, description, href, icon: Icon, color, bg, border }, i) => (
-            <motion.a
-              key={label}
-              href={href}
-              target={href.startsWith('mailto') ? undefined : '_blank'}
-              rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 20 }}
-              animate={visible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.4, delay: 0.2 + i * 0.1 }}
-              whileHover={{ y: -5 }}
-              className="relative group flex items-center gap-4 w-full sm:w-auto px-6 py-5 rounded-2xl transition-all duration-300"
-              style={{
-                backgroundColor: bg,
-                border: `1px solid ${border}`,
-              }}
-              aria-label={`${label} — ${description}`}
-            >
-              <div
-                className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 transition-transform duration-200 group-hover:scale-110"
-                style={{ backgroundColor: `${color}15` }}
+          {CONTACT_LINKS.map(
+            ({ label, description, href, icon: Icon, color, bg, border }, i) => (
+              <motion.a
+                key={label}
+                href={href}
+                target={href.startsWith('mailto') ? undefined : '_blank'}
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 20 }}
+                animate={visible ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.4, delay: 0.2 + i * 0.1 }}
+                whileHover={{ y: -5 }}
+                className="relative group flex items-center gap-4 w-full sm:w-auto px-6 py-5 rounded-2xl transition-all duration-300"
+                style={{
+                  backgroundColor: bg,
+                  border: `1px solid ${border}`,
+                }}
+                aria-label={`${label} — ${description}`}
               >
-                <Icon className="w-5 h-5" style={{ color }} />
-              </div>
-
-              <div className="text-left">
-                <div className="text-sm font-semibold text-text-primary">
-                  {label}
+                <div
+                  className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 transition-transform duration-200 group-hover:scale-110"
+                  style={{ backgroundColor: `${color}15` }}
+                >
+                  <Icon className="w-5 h-5" style={{ color }} />
                 </div>
-                <div className="text-xs text-text-secondary">
-                  {description}
-                </div>
-              </div>
 
-              <ArrowUpRight
-                className="w-4 h-4 text-text-muted ml-2 opacity-0 group-hover:opacity-100 transition-all duration-200 group-hover:text-text-secondary"
-              />
-            </motion.a>
-          ))}
+                <div className="text-left">
+                  <div className="text-sm font-semibold text-text-primary">{label}</div>
+                  <div className="text-xs text-text-secondary">{description}</div>
+                </div>
+
+                <ArrowUpRight className="w-4 h-4 text-text-muted ml-2 opacity-0 group-hover:opacity-100 transition-all duration-200 group-hover:text-text-secondary" />
+              </motion.a>
+            )
+          )}
         </div>
 
         {/* Bottom note */}
@@ -120,7 +114,8 @@ export default function Contact() {
           transition={{ delay: 0.7 }}
           className="mt-16 text-text-muted text-xs font-mono"
         >
-          Construido con React + Vite · Animaciones con Framer Motion · Hecho por Pedro Caso
+          Construido con React + Vite · Animaciones con Framer Motion · Hecho por Pedro
+          Caso
         </motion.p>
       </div>
     </section>

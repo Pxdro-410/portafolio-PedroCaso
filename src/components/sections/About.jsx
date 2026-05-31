@@ -23,7 +23,8 @@ const HIGHLIGHTS = [
     color: '#60A5FA',
     bg: 'rgba(96,165,250,0.08)',
     label: 'Bases de datos',
-    description: 'PostgreSQL, MariaDB, MySQL, SQLite — diseño de esquemas y consultas optimizadas.',
+    description:
+      'PostgreSQL, MariaDB, MySQL, SQLite — diseño de esquemas y consultas optimizadas.',
   },
   {
     icon: Layers,
@@ -54,15 +55,14 @@ export default function About() {
   const [ref, visible] = useScrollReveal()
 
   return (
-    <section
-      id="about"
-      ref={ref}
-      className="relative py-24 px-6"
-    >
+    <section id="about" ref={ref} className="relative py-24 px-6">
       {/* Section separator — clean top border, no glow bleeding into hero */}
       <div
         className="absolute top-0 left-0 right-0 h-px pointer-events-none"
-        style={{ background: 'linear-gradient(to right, transparent, rgba(32,227,178,0.2), transparent)' }}
+        style={{
+          background:
+            'linear-gradient(to right, transparent, rgba(32,227,178,0.2), transparent)',
+        }}
         aria-hidden="true"
       />
 
@@ -111,7 +111,9 @@ export default function About() {
                 </div>
                 <div>
                   <h3 className="text-text-primary font-semibold">Pedro Julio Caso</h3>
-                  <p className="text-text-secondary text-sm">Desarrollador Full-Stack · UVG</p>
+                  <p className="text-text-secondary text-sm">
+                    Desarrollador Full-Stack · UVG
+                  </p>
                 </div>
               </div>
             ) : (
@@ -125,19 +127,24 @@ export default function About() {
                 </div>
                 <div>
                   <h3 className="text-text-primary font-semibold">Pedro Julio Caso</h3>
-                  <p className="text-text-secondary text-sm">Desarrollador Full-Stack · UVG</p>
+                  <p className="text-text-secondary text-sm">
+                    Desarrollador Full-Stack · UVG
+                  </p>
                 </div>
               </div>
             )}
 
             <p className="text-text-secondary leading-relaxed text-base">
               Soy estudiante de Ciencias de la Computación en la{' '}
-              <span className="text-text-primary font-medium">Universidad del Valle de Guatemala (UVG)</span>{' '}
-              y Desarrollador Full-Stack Junior. A lo largo de mis últimos años programando,
-              incluyendo mi experiencia como becado en ITM, he desarrollado una fuerte vocación
-              por conectar ambos extremos del desarrollo: la creación de interfaces web intuitivas
-              y el modelado robusto de bases de datos. Mi enfoque siempre está en entender el
-              problema a fondo para diseñar la solución más eficiente posible.
+              <span className="text-text-primary font-medium">
+                Universidad del Valle de Guatemala (UVG)
+              </span>{' '}
+              y Desarrollador Full-Stack Junior. A lo largo de mis últimos años
+              programando, incluyendo mi experiencia como becado en ITM, he desarrollado
+              una fuerte vocación por conectar ambos extremos del desarrollo: la creación
+              de interfaces web intuitivas y el modelado robusto de bases de datos. Mi
+              enfoque siempre está en entender el problema a fondo para diseñar la
+              solución más eficiente posible.
             </p>
 
             {/* Quick stats */}
@@ -147,7 +154,10 @@ export default function About() {
                 { value: '2+', label: 'Años programando' },
                 { value: '2', label: 'Idiomas' },
               ].map(({ value, label }) => (
-                <div key={label} className="text-center p-4 rounded-xl bg-bg-surface border border-white/5">
+                <div
+                  key={label}
+                  className="text-center p-4 rounded-xl bg-bg-surface border border-white/5"
+                >
                   <div className="text-2xl font-bold text-accent-mint mb-1">{value}</div>
                   <div className="text-xs text-text-muted leading-tight">{label}</div>
                 </div>
@@ -170,7 +180,9 @@ export default function About() {
                 {/* Subtle gradient on hover */}
                 <div
                   className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"
-                  style={{ background: `radial-gradient(ellipse at top left, ${color}15 0%, transparent 60%)` }}
+                  style={{
+                    background: `radial-gradient(ellipse at top left, ${color}15 0%, transparent 60%)`,
+                  }}
                   aria-hidden="true"
                 />
 
