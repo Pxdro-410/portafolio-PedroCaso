@@ -13,10 +13,10 @@ export default function ParticleBackground() {
     const SPACING = 28
     const DOT_RADIUS = 1.3
     const MOUSE_RADIUS = 140
-    const BASE_OPACITY = 0.08
-    const MAX_OPACITY = 0.8
+    const BASE_OPACITY = 0.1
+    const MAX_OPACITY = 1.5
     const LERP_SPEED = 0.08
-    const COLOR = '#20E3B2'
+    const COLOR = '#4D8FF0'
 
     const buildGrid = () => {
       const dots = []
