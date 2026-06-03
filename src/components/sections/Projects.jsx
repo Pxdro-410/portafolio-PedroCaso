@@ -23,10 +23,10 @@ const FILTERS = [
 
 const GRADIENT_COLORS = {
   'from-indigo-500/20 to-violet-500/20': ['#818CF8', '#A78BFA'],
-  'from-blue-500/20 to-cyan-500/20': ['#60A5FA', '#22D3EE'],
+  'from-blue-500/20 to-cyan-500/20': ['#60A5FA', '#004FC4'],
   'from-orange-500/20 to-red-500/20': ['#FB923C', '#EF4444'],
   'from-red-500/20 to-rose-500/20': ['#EF4444', '#FB7185'],
-  'from-emerald-500/20 to-green-500/20': ['#34D399', '#4ADE80'],
+  'from-emerald-500/20 to-green-500/20': ['#004FC4', '#A50044'],
   'from-purple-500/20 to-fuchsia-500/20': ['#C084FC', '#E879F9'],
   'from-sky-500/20 to-blue-500/20': ['#38BDF8', '#60A5FA'],
 }
@@ -61,7 +61,7 @@ function TechBadge({ name }) {
 }
 
 function ProjectCard({ project, onOpen, index }) {
-  const [colorA, colorB] = GRADIENT_COLORS[project.gradient] ?? ['#20E3B2', '#20E3B2']
+  const [colorA, colorB] = GRADIENT_COLORS[project.gradient] ?? ['#004FC4', '#A50044']
 
   return (
     <motion.article
@@ -141,7 +141,7 @@ function ProjectCard({ project, onOpen, index }) {
 }
 
 function ProjectModal({ project, onClose }) {
-  const [colorA, colorB] = GRADIENT_COLORS[project.gradient] ?? ['#20E3B2', '#20E3B2']
+  const [colorA, colorB] = GRADIENT_COLORS[project.gradient] ?? ['#004FC4', '#A50044']
 
   useEffect(() => {
     const handler = (e) => {
@@ -195,7 +195,7 @@ function ProjectModal({ project, onClose }) {
                 </span>
               )}
               {project.hasBackend && (
-                <span className="flex items-center gap-1 text-xs font-mono px-2.5 py-0.5 rounded-md bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
+                <span className="flex items-center gap-1 text-xs font-mono px-2.5 py-0.5 rounded-md bg-blue-500/10 border border-blue-500/20 text-blue-400">
                   <Server className="w-3 h-3" />
                   Backend
                 </span>
@@ -325,11 +325,11 @@ export default function Projects() {
           transition={{ duration: 0.5 }}
           className="mb-12"
         >
-          <p className="font-mono text-accent-mint text-sm mb-3">03. Proyectos</p>
+          <p className="font-mono text-accent-blue text-sm mb-3">03. Proyectos</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-text-primary mb-4">
             Lo que he construido
           </h2>
-          <div className="w-12 h-0.5 bg-accent-mint rounded-full opacity-60 mb-6" />
+          <div className="w-12 h-0.5 bg-accent-blue rounded-full opacity-60 mb-6" />
           <p className="text-text-secondary max-w-2xl text-sm sm:text-base leading-relaxed">
             Cada proyecto tiene un README con instrucciones de instalación, decisiones
             técnicas documentadas y el código en un repositorio público. Sin excepciones.
@@ -359,8 +359,8 @@ export default function Projects() {
               style={
                 filter === f.id
                   ? {
-                      backgroundColor: '#20E3B2',
-                      boxShadow: '0 4px 16px rgba(32,227,178,0.2)',
+                      backgroundColor: '#004FC4',
+                      boxShadow: '0 4px 16px rgba(0,79,196,0.25)',
                     }
                   : {}
               }

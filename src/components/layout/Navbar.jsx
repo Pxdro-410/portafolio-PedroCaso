@@ -53,7 +53,7 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-bg-base/85 backdrop-blur-xl border-b border-accent-mint/10 shadow-lg shadow-black/30'
+          ? 'bg-bg-base/85 backdrop-blur-xl border-b border-accent-blue/10 shadow-lg shadow-black/30'
           : 'bg-transparent'
       }`}
     >
@@ -64,11 +64,11 @@ export default function Navbar() {
           onClick={(e) => handleLinkClick(e, '#hero')}
           className="font-mono text-sm font-medium group"
         >
-          <span className="text-accent-mint group-hover:text-accent-mint-light transition-colors">
+          <span className="text-accent-blue group-hover:text-accent-blue-light transition-colors">
             &lt;
           </span>
           <span className="text-text-primary mx-1">Pedro Caso</span>
-          <span className="text-accent-mint/70 group-hover:text-accent-mint transition-colors">
+          <span className="text-accent-blue/70 group-hover:text-accent-blue transition-colors">
             /&gt;
           </span>
         </a>
@@ -107,7 +107,7 @@ export default function Navbar() {
           href="https://github.com/Pxdro-410"
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden md:flex items-center gap-2 px-4 py-2 rounded-lg border border-accent-mint/35 text-accent-mint text-sm font-medium hover:bg-accent-mint/8 hover:border-accent-mint/60 transition-all duration-200"
+          className="hidden md:flex items-center gap-2 px-4 py-2 rounded-lg border border-accent-blue/35 text-accent-blue text-sm font-medium hover:bg-accent-blue/8 hover:border-accent-blue/60 transition-all duration-200"
         >
           <NavGitHubIcon className="w-4 h-4" />
           GitHub

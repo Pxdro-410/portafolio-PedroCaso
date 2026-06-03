@@ -31,7 +31,7 @@ export default function Technologies() {
         className="absolute right-0 top-1/2 -translate-y-1/2 w-64 h-64 pointer-events-none"
         style={{
           background:
-            'radial-gradient(ellipse, rgba(32,227,178,0.05) 0%, transparent 70%)',
+            'radial-gradient(ellipse, rgba(0,79,196,0.05) 0%, transparent 70%)',
         }}
         aria-hidden="true"
       />
@@ -44,11 +44,11 @@ export default function Technologies() {
           transition={{ duration: 0.5 }}
           className="mb-12"
         >
-          <p className="font-mono text-accent-mint text-sm mb-3">02. Stack</p>
+          <p className="font-mono text-accent-blue text-sm mb-3">02. Stack</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-text-primary mb-4">
             Tecnologías que uso
           </h2>
-          <div className="w-12 h-0.5 bg-accent-mint rounded-full mb-6" />
+          <div className="w-12 h-0.5 bg-accent-blue rounded-full mb-6" />
           <p className="text-text-secondary max-w-2xl leading-relaxed text-sm sm:text-base">
             Estas son las tecnologías con las que me siento cómodo trabajando y que elijo
             para mis proyectos. Hice esta selección basada en mi experiencia personal, la
@@ -68,7 +68,7 @@ export default function Technologies() {
             onClick={() => setActiveCategory(null)}
             className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all duration-200 ${
               activeCategory === null
-                ? 'bg-accent-mint text-bg-base shadow-lg shadow-accent-mint/20'
+                ? 'bg-accent-blue text-bg-base shadow-lg shadow-accent-blue/20'
                 : 'bg-bg-surface border border-white/10 text-text-secondary hover:text-text-primary hover:border-white/20'
             }`}
           >
@@ -162,21 +162,21 @@ export default function Technologies() {
           initial={{ opacity: 0, y: 20 }}
           animate={visible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.5 }}
-          className="mt-16 p-6 rounded-2xl bg-bg-surface border border-accent-mint/20 relative overflow-hidden"
+          className="mt-16 p-6 rounded-2xl bg-bg-surface border border-accent-blue/20 relative overflow-hidden"
         >
           <div
             className="absolute inset-0 opacity-30 pointer-events-none rounded-2xl"
             style={{
               background:
-                'radial-gradient(ellipse at top left, rgba(32,227,178,0.06) 0%, transparent 60%)',
+                'radial-gradient(ellipse at top left, rgba(0,79,196,0.06) 0%, transparent 60%)',
             }}
             aria-hidden="true"
           />
 
           <div className="relative flex gap-4">
-            <Quote className="w-5 h-5 text-accent-mint flex-shrink-0 mt-1" />
+            <Quote className="w-5 h-5 text-accent-blue flex-shrink-0 mt-1" />
             <div>
-              <p className="text-xs font-mono text-accent-mint uppercase tracking-widest mb-3">
+              <p className="text-xs font-mono text-accent-blue uppercase tracking-widest mb-3">
                 Por qué este stack
               </p>
               <p className="text-text-secondary text-sm leading-relaxed whitespace-pre-line">

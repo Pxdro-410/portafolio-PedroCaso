@@ -27,9 +27,9 @@ const CONTACT_LINKS = [
     description: 'Escríbeme directo',
     href: 'mailto:pedrojuliocaso@gmail.com',
     icon: Mail,
-    color: '#22D3EE',
-    bg: 'rgba(34,211,238,0.08)',
-    border: 'rgba(34,211,238,0.3)',
+    color: '#004FC4',
+    bg: 'rgba(0,79,196,0.08)',
+    border: 'rgba(0,79,196,0.3)',
   },
 ]
 
@@ -43,7 +43,7 @@ export default function Contact() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'radial-gradient(ellipse 60% 40% at 50% 80%, rgba(32,227,178,0.07) 0%, transparent 70%)',
+            'radial-gradient(ellipse 60% 40% at 50% 80%, rgba(0,79,196,0.07) 0%, transparent 70%)',
         }}
         aria-hidden="true"
       />
@@ -56,11 +56,11 @@ export default function Contact() {
           transition={{ duration: 0.5 }}
           className="mb-12"
         >
-          <p className="font-mono text-accent-mint text-sm mb-3">04. Contacto</p>
+          <p className="font-mono text-accent-blue text-sm mb-3">04. Contacto</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-text-primary mb-6">
             Contacto
           </h2>
-          <div className="w-12 h-0.5 bg-accent-mint rounded-full mx-auto mb-8" />
+          <div className="w-12 h-0.5 bg-accent-blue rounded-full mx-auto mb-8" />
 
           <p className="text-text-secondary text-base sm:text-lg leading-relaxed max-w-xl mx-auto">
             Estoy abierto a oportunidades laborales, colaboraciones, o trabajos en

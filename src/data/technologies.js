@@ -1,14 +1,9 @@
-/**
- * Technologies data
- * Stack elegido con justificación técnica — importante para la sección
- * "por qué lo escogiste" que pide Pixelworks.
- */
 
 export const techCategories = [
   {
     id: 'frontend',
     label: 'Front-end',
-    color: '#20E3B2',
+    color: '#1D6FE8',
     technologies: [
       {
         name: 'React',
@@ -69,7 +64,7 @@ export const techCategories = [
   {
     id: 'backend',
     label: 'Back-end',
-    color: '#20E3B2',
+    color: '#1D6FE8',
     technologies: [
       {
         name: 'Node.js',
@@ -124,7 +119,7 @@ export const techCategories = [
   {
     id: 'databases',
     label: 'Bases de datos',
-    color: '#20E3B2',
+    color: '#1D6FE8',
     technologies: [
       {
         name: 'PostgreSQL',
@@ -155,7 +150,7 @@ export const techCategories = [
   {
     id: 'devops',
     label: 'DevOps / Tools',
-    color: '#20E3B2',
+    color: '#1D6FE8',
     technologies: [
       {
         name: 'Docker',
@@ -195,8 +190,8 @@ export const techCategories = [
       },
       {
         name: 'Vitest',
-        color: '#6EE7B7',
-        bg: 'rgba(110, 231, 183, 0.08)',
+        color: '#5B9EFF',
+        bg: 'rgba(91, 158, 255, 0.08)',
         rationale:
           'Test runner integrado con Vite, más rápido que Jest en proyectos React',
       },

@@ -13,10 +13,13 @@ export default {
           elevated: '#1C2128',
         },
         accent: {
-          mint: '#20E3B2',
-          'mint-light': '#5EEFD0',
-          'mint-dim': '#0FAF88',
+          blue: '#004FC4',
+          'blue-light': '#3D7FE8',
+          'blue-dim': '#003A96',
           white: '#F5F5F0',
+          red: '#A50044',
+          'red-light': '#D4005A',
+          'red-dim': '#7A0033',
         },
         text: {
           primary: '#F5F5F0',
